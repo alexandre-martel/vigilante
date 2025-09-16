@@ -135,14 +135,14 @@ export default function App() {
         />
       </div>
 
-      {/* Résultats entreprise */}
+      {/* Résultats entreprise
       <div className="border p-4 rounded">
         <h2 className="font-semibold">Résultats Entreprise</h2>
         <div className="space-y-2">
           <div>Nom commercial : {company.name}</div>
           <div>SIRET : {company.siret}</div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

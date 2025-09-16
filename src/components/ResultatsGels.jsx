@@ -6,7 +6,7 @@ const ResultatsGels = ({ nom, prenom, dateNaissance }) => {
 
   // Charger le JSON au montage
   useEffect(() => {
-    fetch("/Registrenationaldesgels.json")
+    fetch("Registrenationaldesgels.json")
       .then((res) => res.json())
       .then((json) => setData(json.Publications.PublicationDetail || []));
   }, []);
@@ -62,7 +62,7 @@ const ResultatsGels = ({ nom, prenom, dateNaissance }) => {
     <div>
       {results.map((personne) => (
         <div key={personne.IdRegistre} className="p-2 border-b">
-          <strong>{personne.Nom}</strong>
+          <strong>{personne.Nom} {personne.Prenom}</strong>
           <div>
             {personne.RegistreDetail.map((detail, i) => (
               <div key={i}>
